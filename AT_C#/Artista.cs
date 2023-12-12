@@ -13,6 +13,11 @@ public class Artista
 
     public void atualizarQntMusicas()
     {
-        QntMusicas = ListaMusicas.Count;
+        for (int i = 0; i < ListaMusicas.Count; i++)
+        {
+            if(ListaMusicas[i] != null) {
+                QntMusicas = QntMusicas + 1;
+            }
+        }
     }
 }

@@ -148,13 +148,14 @@ public class GerenciarArtistas
         }
     }
 
-    public void ExibirArtistasDisp()
+    public bool ExibirArtistasDisp()
     {
         List<Artista> artistasDisp = gJson.Artistas;
 
         if (artistasDisp == null)
         {
             Console.WriteLine("Não foi possivel encontrar artistas cadastradas.");
+            return false;
         }
         else
         {
@@ -164,6 +165,7 @@ public class GerenciarArtistas
                 Console.WriteLine(artistas.Nome);
             }
             Console.WriteLine("");
+            return true;
         }
     }
 
